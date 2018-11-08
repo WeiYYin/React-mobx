@@ -4,6 +4,7 @@ import { Tooltip,Switch  } from 'antd'
 import routerConfig from '@/js/router.js'
 import { inject,observer } from 'mobx-react';
 import Loading from "@/components/Loading"
+import {Title} from "@/js/unit.js"
 
 @inject('Store')
 @observer
@@ -13,7 +14,7 @@ class Right extends Component {
     }
     componentWillReceiveProps(nextProps) {
         if (nextProps.location.pathname !== this.props.location.pathname) {
-            window.document.title = '隐约雷鸣 阴霾天空 但盼风雨来 能留你在此';
+            Title();
         } 
     }
     render() {

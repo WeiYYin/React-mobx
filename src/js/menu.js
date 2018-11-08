@@ -131,6 +131,11 @@ export default [
                 title:'Radio',
                 icon:'check-circle',
             },
+            {
+                key:'/select',
+                title:'Select',
+                icon:'down-square',
+            },
         ]
     },
 ]

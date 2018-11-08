@@ -22,6 +22,8 @@ const inputNumber = Loadable({loader: () => import('../routers/DataEntry/InputNu
 const Mention = Loadable({loader: () => import('../routers/DataEntry/Mention/index'), loading : DelayLoading,delay:3000});
 const rate = Loadable({loader: () => import('../routers/DataEntry/Rate/index'), loading : DelayLoading,delay:3000});
 const radio = Loadable({loader: () => import('../routers/DataEntry/Radio/index'), loading : DelayLoading,delay:3000});
+const select = Loadable({loader: () => import('../routers/DataEntry/Select/index'), loading : DelayLoading,delay:3000});
+
 
 
 
@@ -114,5 +116,9 @@ export default [
     {
         path:'/data/radio',
         component:radio,
+    },
+    {
+        path:'/data/select',
+        component:select,
     },
 ]
