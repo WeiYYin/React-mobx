@@ -16,5 +16,4 @@ class Layouts extends Component {
         )
     }
 }
-
 export default Layouts

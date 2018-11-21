@@ -10,8 +10,6 @@ class FromBox extends Component {
         this.props.submit(form)
     }
     render(){
-        console.log(this.props);
-        
         const { getFieldDecorator } = this.props.form
         return (
             <Form onSubmit={this.handleSubmit}>

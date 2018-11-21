@@ -152,7 +152,7 @@ class icon extends Component {
                                         document.execCommand("copy");
                                         document.body.removeChild(ipt);
                                         message.success('复制成功!');
-                                    }}> <Icon type={e} theme="outlined" theme={this.state.typevalue}/> <span>{e}</span> </li>
+                                    }}> <Icon type={e} theme={this.state.typevalue}/> <span>{e}</span> </li>
                                 })
                             }
                         </ul>
@@ -175,8 +175,6 @@ class icon extends Component {
                         {code(Ya.iconShow,Ya.iconCode,Ya.iconlink)}
                     </Col>
                 </Row> 
-
-
                 <Button className='UpTop' onClick={this.GoTop} type='primary' shape='circle' icon='arrow-up'></Button>
             </div>
         )

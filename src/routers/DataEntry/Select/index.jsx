@@ -3,8 +3,21 @@ import Common from '@/components/common/index'
 import { Select } from 'antd';
 
 const {Option,OptGroup} = Select;
+const provinceData = ['Zhejiang', 'Jiangsu'];
+const cityData = {
+    Zhejiang: ['Hangzhou', 'Ningbo', 'Wenzhou'],
+    Jiangsu: ['Nanjing', 'Suzhou', 'Zhenjiang'],
+};
 class index extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            cities: cityData[provinceData[0]],
+            secondCity: cityData[provinceData[0]][0],
+        }
+    }
     render() {
+        const { cities } = this.state;
         const children = [];
         for (let i = 10; i < 36; i++) {
             children.push(<Option key={i.toString(36) + i}>{i.toString(36) + i}</Option>);
@@ -49,6 +62,35 @@ class index extends Component {
                     <code> size </code>  <code>large default small</code>
                 </p>,
             },
+            {
+                show:<>
+                    <Select
+                        defaultValue={provinceData[0]}
+                        style={{ width: 120 }}
+                        onChange={(value)=>{
+                            this.setState({
+                                cities: cityData[value],
+                                secondCity: cityData[value][0],
+                            })
+                        }}
+                    >
+                        {provinceData.map(province => <Option key={province}>{province}</Option>)}
+                    </Select>
+                    <Select
+                        style={{ width: 120 }}
+                        value={this.state.secondCity}
+                        onChange={(value)=>{
+                            this.setState({
+                                secondCity: value,
+                            });
+                        }}
+                    >
+                        {cities.map(city => <Option key={city}>{city}</Option>)}
+                    </Select>
+                </>,
+                title:'省市联动',
+                code: <p>省市联动是典型的例子。</p>
+            }
         ];
         let right = [
             {
@@ -85,6 +127,17 @@ class index extends Component {
                 title:'分组',
                 code:<p> 使用 <code>OptGroup</code> 进行分组  <br/> <code>OptGroup label</code>  <code>string|React.Element</code></p>,
             },
+            {
+                show:<Select labelInValue defaultValue={{ key: 'lucy' }} style={{ width: 120 }} onChange={(v)=>{
+                    console.log(v);
+                }}>
+                    <Option value="jack">Jack (100)</Option>
+                    <Option value="lucy">Lucy (101)</Option>
+                </Select>,
+                title:'获取选项文本',
+                code: <p>默认情况下 <code>onChange</code> 里只能拿到 <code>value</code> ，如果需要拿到选中的节点文本 <code>label</code> ，可以使用 <code>labelInValue</code> 属性。
+                选中项的 <code>label</code> 会被包装到 <code>value</code> 中传递给 <code>onChange</code> 等函数，此时 <code>value</code> 是一个对象。</p>
+            }
         ];
         return (
             <Common left={left} right={right}/>
