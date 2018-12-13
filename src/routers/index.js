@@ -4,11 +4,13 @@ import Layouts from './Layouts'
 import Login from './Login'
 import { Provider } from 'mobx-react'
 import store from './store'
+import EventBus from './EventBus'
+
 
 class Routers extends Component {
     constructor(props){
         super(props)
-        this.pathname = this.props.location.pathname
+        this.pathname = this.props.location.pathname;
     }
     render(){
         return (

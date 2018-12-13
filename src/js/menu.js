@@ -136,6 +136,11 @@ export default [
                 title:'Select',
                 icon:'down-square',
             },
+            {
+                key:'/slider',
+                title:'Slider',
+                icon:'rocket',
+            },
         ]
     },
 ]
