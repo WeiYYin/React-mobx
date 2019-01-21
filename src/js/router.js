@@ -24,7 +24,9 @@ const rate = Loadable({loader: () => import('../routers/DataEntry/Rate/index'), 
 const radio = Loadable({loader: () => import('../routers/DataEntry/Radio/index'), loading : DelayLoading,delay:3000});
 const select = Loadable({loader: () => import('../routers/DataEntry/Select/index'), loading : DelayLoading,delay:3000});
 const slider = Loadable({loader: () => import('../routers/DataEntry/Slider/index'), loading : DelayLoading,delay:3000});
-
+const Switch = Loadable({loader: () => import('../routers/DataEntry/Switch/index'), loading : DelayLoading,delay:3000});
+const Transfer = Loadable({loader: () => import('../routers/DataEntry/Transfer/index'), loading : DelayLoading,delay:3000});
+const TimePicker = Loadable({loader: () => import('../routers/DataEntry/TimePicker/index'), loading : DelayLoading,delay:3000});
 
 
 
@@ -126,5 +128,17 @@ export default [
     {
         path:'/data/slider',
         component:slider,
+    },
+    {
+        path:'/data/switch',
+        component:Switch,
+    },
+    {
+        path:'/data/transfer',
+        component:Transfer,
+    },
+    {
+        path:'/data/timePicker',
+        component:TimePicker,
     },
 ]

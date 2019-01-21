@@ -1,20 +1,18 @@
 class EventBus{
     constructor(){
-        this.events = this.events || new Object();
+        this.events = this.events || [];
     }
 }
 //首先构造函数需要存储event事件，使用键值对存储
 //然后我们需要发布事件，参数是事件的type和需要传递的参数
 EventBus.prototype.emit = function(type,...args){
     let e = this.events[type];
-    // 查看这个type的event有多少个回调函数，如果有多个需要依次调用。
+    // 查看这个 type 的 event有多少个回调函数，如果有多个需要依次调用。
     if(e instanceof Array){
         for (let i = 0; i < e.length; i++) {
             const element = e[i];
             element.apply(this,args);
         }
-    }else{
-        e[0].apply(this,args);
     }
 }
 //然后我们需要写监听函数，参数是事件type和触发时需要执行的回调函数

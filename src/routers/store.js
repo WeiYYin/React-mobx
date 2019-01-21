@@ -10,6 +10,9 @@ class Store{
     @action updateLoading = (data)=>{
         this.loading = data;
     }
+    @action Test = async(data)=>{
+        return '123'
+    }
 }
 
 export default new Store();

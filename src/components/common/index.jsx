@@ -5,17 +5,23 @@ import {Row,Col} from 'antd'
 class Common extends Component {
     render() {
         let {left,right} = this.props;
+        let col = {
+            left:12,right:12,
+        }
+        if(!!!right&&right.length<1){
+            col = {left:24,right:0}
+        }
         return (
             <section className='Section_box'>
                 <Row gutter={10}>
-                    <Col span={12}>
+                    <Col span={col.left}>
                         {
                             left.map((el, i) => {
                                 return <Code show={el.show} code={el.code} title={el.title} key={i}></Code>
                             })
                         }
                     </Col>
-                    <Col span={12}>
+                    <Col span={col.right}>
                         {
                             right.map((el, i) => {
                                 return <Code show={el.show} code={el.code} title={el.title} key={i}></Code>

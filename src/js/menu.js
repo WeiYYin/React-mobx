@@ -141,7 +141,21 @@ export default [
                 title:'Slider',
                 icon:'rocket',
             },
+            {
+                key:'/switch',
+                title:'Switch',
+                icon:'retweet',
+            },
+            {
+                key:'/transfer',
+                title:'Transfer',
+                icon:'swap',
+            },
+            {
+                key:'/timePicker',
+                title:'TimePicker',
+                icon:'clock-circle',
+            },
         ]
     },
 ]
-

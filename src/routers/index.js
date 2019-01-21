@@ -4,7 +4,6 @@ import Layouts from './Layouts'
 import Login from './Login'
 import { Provider } from 'mobx-react'
 import store from './store'
-import EventBus from './EventBus'
 
 
 class Routers extends Component {
