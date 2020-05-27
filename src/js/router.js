@@ -27,7 +27,12 @@ const slider = Loadable({loader: () => import('../routers/DataEntry/Slider/index
 const Switch = Loadable({loader: () => import('../routers/DataEntry/Switch/index'), loading : DelayLoading,delay:3000});
 const Transfer = Loadable({loader: () => import('../routers/DataEntry/Transfer/index'), loading : DelayLoading,delay:3000});
 const TimePicker = Loadable({loader: () => import('../routers/DataEntry/TimePicker/index'), loading : DelayLoading,delay:3000});
+const Upload = Loadable({loader: () => import('../routers/DataEntry/Upload/index'), loading : DelayLoading,delay:3000});
 
+// 前端 复习
+const ObjectItem = Loadable({loader: () => import('../routers/Web/Object/index'), loading : DelayLoading,delay:3000});
+const JsBase = Loadable({loader: () => import('../routers/Web/JsBase/index'), loading : DelayLoading,delay:3000});
+const JSAsynchronous = Loadable({loader: () => import('../routers/Web/JSasynchronous/index'), loading : DelayLoading,delay:3000});
 
 
 
@@ -140,5 +145,21 @@ export default [
     {
         path:'/data/timePicker',
         component:TimePicker,
+    },
+    {
+        path:'/data/upload',
+        component:Upload,
+    },
+    {
+        path:'/Web/Object',
+        component:ObjectItem,
+    },
+    {
+        path:'/Web/JsBase',
+        component:JsBase,
+    },
+    {
+        path:'/Web/JSAsynchronous',
+        component:JSAsynchronous,
     },
 ]

@@ -40,7 +40,7 @@ class Right extends Component {
                             <Route key={i} path={item.path} component={item.component} exact/>
                         )}
                     </Loading>  
-                </div>、
+                </div>
             </div>
         )
     }

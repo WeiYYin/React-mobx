@@ -1,3 +1,7 @@
+let GetItem = (key,title,icon)=>{
+    return {key,title,icon}
+}
+
 export default [
     {
         key: '/home',
@@ -156,6 +160,19 @@ export default [
                 title:'TimePicker',
                 icon:'clock-circle',
             },
+            {
+                key:'/upload',
+                title:'Upload',
+                icon:'clock-circle',
+            },
         ]
+    },
+    {
+        ...GetItem('/web','前端复习','global'),
+        list:[
+            GetItem('/Object','内置对象','star'),
+            GetItem('/JsBase','JS 基础知识','star'),
+            GetItem('/JSAsynchronous','JS 异步编程','radar-chart'),
+        ],
     },
 ]

@@ -59,6 +59,7 @@ class NormalLoginForm extends Component {
                     Or   &nbsp;&nbsp;&nbsp;&nbsp;
                     <span>register now!</span>
                 </FormItem>
+                
             </Form>
         )
     }
